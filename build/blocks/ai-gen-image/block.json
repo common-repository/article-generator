@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json.schemastore.org/block.json",
+  "apiVersion": 2,
+  "title": "GPT Image Generator",
+  "name": "ag/img-generator",
+  "category": "media",
+  "icon": "gpt-create-img",
+  "attributes": {
+    "prompt": {
+      "type": "string",
+      "default": ""
+    },
+    "sizesAvailable": {
+      "type": "array",
+      "default": [
+        {
+          "value": "1024x1024",
+          "label": "Big (1024x1024)"
+        },
+        {
+          "value": "512x512",
+          "label": "Medium (512x512)"
+        },
+        {
+          "value": "256x256",
+          "label": "Small (256x256)"
+        }
+      ]
+    },
+    "sizeValue": {
+      "type": "string",
+      "default": "512x512"
+    },
+    "toggleSaveImg": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "example": {
+    "attributes": {
+      "prompt": "Create a high-quality image of an exciting soccer match in a crowded stadium. In the scene, two teams in different uniforms are competing for control of the ball on the field. The sun is setting in the background, tinting the sky orange and pink. In the stands, fans are cheering and waving flags as they root for their teams. Ensure the image has high quality to capture all the details and emotions of the scene.",
+      "sizeValue": "1024x1024"
+    }
+  },
+  "supports": {
+    "html": false
+  },
+  "textdomain": "article-gen",
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css"
+}
